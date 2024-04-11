@@ -1,0 +1,15 @@
+{
+  "name": "pomodoro",
+  "version": "1.0.0",
+  "description": "A pomodoro timer web appliaction.",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild src/index.js --bundle --minify --outfile=dist/main.js",
+    "start": "esbuild --bundle src/index.js --outfile=dist/main.js --servedir=dist --watch"
+  },
+  "author": "Carter Craven <https://ccraven9.github.io/>",
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild": "^0.20.2"
+  }
+}

@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --background-break: #A7C7E7;
+    --background-active: #EDEADE
+}
+
+body {
+    background-color: var(--background-active);
+}
+
+.active-background {
+    background-color: var(--background-active);
+    transition: background-color 1000ms linear;
+}
+
+.break-background {
+    background-color: var(--background-break);
+    transition: background-color 1000ms linear;
+}
+
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.timer-container__clock {
+    border: .2rem solid black;
+    border-radius: .4rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    width: 26rem;
+    height: 18rem;
+    align-content: center;
+
+    .clock-display {
+        font-size: 4rem;
+    }
+
+    .clock-button {
+        button {
+            font-size: 2rem;
+            border: .1rem solid black;
+            border-radius: .25rem;
+            box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+            cursor: pointer;
+            line-height: 1.25;
+            transition: all 250ms;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: 12rem;
+        }
+
+        button:hover {
+            border-color: rgba(0, 0, 0, 0.15);
+            box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+            transform: translateY(-3px);
+        }
+    }
+
+    .pom-count {
+        padding-top: 1rem;
+    }
+}
