@@ -5,9 +5,9 @@ This project was inspired by a very useful app that I use daily, [Pomfocus.io](h
 
 ## The Pomodoro Technique
 
-The pomodoro technique is a time managment strategy to help a person focus and complete a larger task by utilizing timed focus sessions with small breaks in between each focus session.
+The pomodoro technique is a time management strategy to help a person focus and complete a larger task by utilizing timed focus sessions with small breaks in between each focus session.
 
-The application by default uses a 20 minute working session followed by a 5 minute break, and then repeats. After the fourth working session, there is a 15 minute break. Simply press the button labled "Start" to activate the timer!
+The application by default uses a 20-minute working session followed by a 5-minute break, and then repeats. After the fourth working session, there is a 15-minute break. Simply press the button labeled "Start" to activate the timer!
 
 ## Installation
 
