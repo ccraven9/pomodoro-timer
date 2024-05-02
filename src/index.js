@@ -3,6 +3,7 @@ const clockDisplay = document.getElementById('clock-display');
 const timerBtn = document.getElementById('clock-button');
 const pomStauts = document.getElementById('pom-status');
 const pomCounterSpan = document.getElementById('pom-counter');
+const pomReset = document.getElementById('reset-counter');
 
 const DEFAULT_SECONDS = 60;
 const DEFAULT_POMODORO = 19;
@@ -22,6 +23,7 @@ let currentTime;
 
 timerBtn.addEventListener('click', () => activateTimer());
 document.onkeydown = (e) => e.code === 'Space' ? activateTimer() : null;
+pomReset.addEventListener('click', () => resetPomCounter());
 
 const activateTimer = () => {
     if (timerBtn.textContent === 'Start') {
@@ -45,7 +47,7 @@ const decrementTimer = () => {
         onBreak ? setPomodoro() : setBreak();
         return;
     }
-    clockDisplay.innerText = (timerSeconds - sec <= 9) ? `${timerMinutes - min} : 0${timerSeconds - sec}` : `${timerMinutes - min} : ${timerSeconds - sec}`
+    clockDisplay.innerText = (timerSeconds - sec <= 9) ? `${timerMinutes - min} : 0${timerSeconds - sec}` : `${timerMinutes - min} : ${timerSeconds - sec}`;
 }
 
 const resetInterval = () => {
@@ -90,5 +92,12 @@ const setPomodoro = () => {
     pomStauts.innerText = 'Concentrate!';
     pomCounterSpan.innerText = ' ' + pomCounter;
     document.body.className = 'active-background';
+    resetInterval();
+}
+
+const resetPomCounter = () => {
+    console.log('reset');
+    pomCounter = 1;
+    pomCounterSpan.innerText = ' ' + pomCounter;
     resetInterval();
 }

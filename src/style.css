@@ -5,7 +5,8 @@
 
 :root {
     --background-break: #A7C7E7;
-    --background-active: #EDEADE
+    --background-active: #EDEADE;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -33,7 +34,6 @@ body {
 .timer-container__clock {
     border: .2rem solid black;
     border-radius: .4rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     width: 26rem;
     height: 18rem;
@@ -67,5 +67,13 @@ body {
 
     .pom-count {
         padding-top: 1rem;
+        .pom-count__click-area {
+            cursor: pointer;
+        }
     }
+}
+
+.task-header {
+    border-bottom: 1px solid black;
+    font-size: 2rem;
 }
