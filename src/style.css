@@ -70,10 +70,31 @@ body {
         .pom-count__click-area {
             cursor: pointer;
         }
+        .pom-count__click-area:hover .tooltip{
+            display:block;
+        }
     }
 }
 
 .task-header {
     border-bottom: 1px solid black;
-    font-size: 2rem;
+    font-size: 2rem;  
 }
+
+.task-header__plus-button {
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip {
+    display: none;
+    color: white;
+    /* border: 1px solid black; */
+    border-radius: .25rem;
+    background-color: #5a5a5a;
+    position: absolute;
+    margin-left: 7rem;
+    z-index: 1;
+    padding: .2rem;
+}
+
