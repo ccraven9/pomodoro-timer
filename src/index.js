@@ -99,5 +99,6 @@ const resetPomCounter = () => {
     console.log('reset');
     pomCounter = 1;
     pomCounterSpan.innerText = ' ' + pomCounter;
+    clockDisplay.innerText = '20 : 00';
     resetInterval();
 }

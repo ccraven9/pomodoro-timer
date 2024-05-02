@@ -89,12 +89,18 @@ body {
 .tooltip {
     display: none;
     color: white;
-    /* border: 1px solid black; */
     border-radius: .25rem;
     background-color: #5a5a5a;
     position: absolute;
     margin-left: 7rem;
+    margin-top: .2rem;
     z-index: 1;
     padding: .2rem;
+    animation: fadeIn .4s;
 }
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
 
