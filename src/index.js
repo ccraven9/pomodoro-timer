@@ -4,6 +4,8 @@ const timerBtn = document.getElementById('clock-button');
 const pomStauts = document.getElementById('pom-status');
 const pomCounterSpan = document.getElementById('pom-counter');
 const pomReset = document.getElementById('reset-counter');
+const addTaskBtn = document.getElementById('add-task-button');
+const taskList = document.getElementById('task-list');
 
 const DEFAULT_SECONDS = 60;
 const DEFAULT_POMODORO = 19;
@@ -24,6 +26,7 @@ let currentTime;
 timerBtn.addEventListener('click', () => activateTimer());
 document.onkeydown = (e) => e.code === 'Space' ? activateTimer() : null;
 pomReset.addEventListener('click', () => resetPomCounter());
+addTaskBtn.addEventListener('click', () => addTaskListItem());
 
 const activateTimer = () => {
     if (timerBtn.textContent === 'Start') {
@@ -101,4 +104,16 @@ const resetPomCounter = () => {
     pomCounterSpan.innerText = ' ' + pomCounter;
     clockDisplay.innerText = '20 : 00';
     resetInterval();
+}
+
+const addTaskListItem = () => {
+//     var node=document.createElement("LI");
+// var textnode=document.createTextNode(firstname);
+// node.appendChild(textnode);
+// document.getElementById("demo").appendChild(node);
+
+    let listItem = document.createElement('li');
+    let text = document.createTextNode('Test Task');
+    listItem.appendChild(text);
+    taskList.appendChild(listItem);
 }

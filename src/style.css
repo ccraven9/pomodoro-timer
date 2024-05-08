@@ -84,6 +84,7 @@ body {
 .task-header__plus-button {
     position: relative;
     cursor: pointer;
+    user-select: none;
 }
 
 .tooltip {
@@ -97,6 +98,15 @@ body {
     z-index: 1;
     padding: .2rem;
     animation: fadeIn .4s;
+}
+
+.task-list {
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    li {
+        text-align: center;
+    }
 }
 
 @keyframes fadeIn {
